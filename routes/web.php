@@ -27,6 +27,10 @@ Route::get('/articles/{id}', function ($id) {
     echo "Ini adalah halaman Artikel dengan ID: " . $id;
 });
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/', [PageController::class, 'about']);
-Route::get('/', [PageController::class, 'articles']);
+// Route::get('/', [PageController::class, 'index']);
+// Route::get('/about', [PageController::class, 'about']);
+// Route::get('/articles/{id}', [PageController::class, 'articles']);
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about', [AboutController::class, 'about']);
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
