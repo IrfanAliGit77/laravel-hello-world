@@ -17,8 +17,8 @@ class PageController extends Controller
             'Nama     : Muh. Irfan Ali' . '<br>' . 'Kelas    : TI-2G';
     }
 
-    public function articles()
+    public function articles($id)
     {
-        return 'Ini adalah halaman Artikel dengan Id: ' . '$id';
+        return 'Ini adalah halaman Artikel dengan Id: ' . $id;
     }
 }
