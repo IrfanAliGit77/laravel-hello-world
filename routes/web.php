@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
+// use App\Http\Controllers\PageController;
+// use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\AboutController;
+// use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EducaController;
 
 /*
@@ -40,47 +40,46 @@ use App\Http\Controllers\EducaController;
 // Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 Route::get('/', function ($id) {
-    echo 'Hi ! Selamat Datang di Website Educa Studio :")';
+    echo '<a href=https://www.educastudio.com>Menuju Ke HOME EDUCA STUDIO</a>';
 });
 
 Route::prefix('category')->group(function () {
     Route::get('/marbel-edu-games', function ($id) {
-        echo 'Ini adalah Halaman Game Kelereng Hehehe';
+        echo '<a href=https://www.educastudio.com/category/marbel-edu-games>Ingin Bermain Marbel?</a>';
     });
     Route::get('/marbel-and-friends-kids-games', function ($id) {
-        echo 'Ini adalah Halaman Game Kelereng yang bisa dimainkan bersama Teman-Teman!';
+        echo '<a href=https://www.educastudio.com/category/marbel-and-friends-kids-games>Ingin Bermain Marbel bersama Teman?</a>';
     });
     Route::get('/riri-story-books', function ($id) {
-        echo 'Ini adalah Halaman dari Buku Cerita Riri';
+        echo '<a href=https://www.educastudio.com/category/riri-story-books>Ayo Baca Buku Cerita Riri :D</a>';
     });
     Route::get('/kolak-kids-songs', function ($id) {
-        echo 'Ini adalah Lagu Anak-anak Kolak, selamat Mendengarkan :D';
+        echo '<a href=https://www.educastudio.com/category/kolak-kids-songs>Mari Mendengarkan Lagu Anak-anak dari Kolak!</a>';
     });
 });
 
 Route::get('/news/{name?}', function ($name = null) {
-    echo 'Ini adalah Halaman Berita dari Educa Studio';
+    echo '<a href=https://www.educastudio.com/news>Baca Berita dari Educa Studio</a>';
 });
 Route::get('/news/{name?}', function ($name = 'educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19') {
-    echo 'Ini adalah Halaman Berita dari Educa Studio yang Berbagi pada Warga Terdampak Covid-19';
+    echo '<a href=https://www.educastudio.com/news/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19>
+    Educa Studio Berbagi Pada Warga Terdampak Covid-19</a>';
 });
 
 Route::prefix('program')->group(function () {
     Route::get('/karir', function ($id) {
-        echo 'Ini adalah Halaman Program Karir Educa Studio';
+        echo '<a href=https://www.educastudio.com/program/karir>Program Karir Educa Studio</a>';
     });
     Route::get('/magang', function ($id) {
-        echo 'Ini adalah Halaman Program Magang Educa Studio';
+        echo '<a href=https://www.educastudio.com/program/magang>Program Magang Educa Studio</a>';
     });
     Route::get('/kunjungan-industri', function ($id) {
-        echo 'Ini adalah Halaman Program Kunjungan Industri Educa Studio';
+        echo '<a href=https://www.educastudio.com/program/kunjungan-industri>Program Kunjungan Industri Educa Studio</a>';
     });
 });
 
 Route::get('/about-us', function ($id) {
-    echo " Instagram    : @educaStud";
-    echo " Facebook     : Educa Studio";
-    echo " Whatsapp     : +6287345890765";
+    echo '<a href=https://www.educastudio.com/about-us>Tentang Educa Studio</a>';
 });
 
 Route::get('/', [EducaController::class, 'index']);

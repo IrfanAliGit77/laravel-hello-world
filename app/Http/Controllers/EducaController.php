@@ -8,48 +8,47 @@ class EducaController extends Controller
 {
     public function index()
     {
-        return 'Hi! Selamat Datang di Website Laravel';
+        return '<a href=https://www.educastudio.com>Menuju Ke HOME EDUCA STUDIO</a>';
     }
     public function marbel()
     {
-        return 'Ini adalah Halaman Game Kelereng Hehehe';
+        return '<a href=https://www.educastudio.com/category/marbel-edu-games>Ingin Bermain Marbel?</a>';
     }
     public function marbelFriends()
     {
-        return 'Ini adalah Halaman Game Kelereng yang bisa dimainkan bersama Teman-Teman!';
+        return '<a href=https://www.educastudio.com/category/marbel-and-friends-kids-games>Ingin Bermain Marbel bersama Teman?</a>';
     }
     public function riri()
     {
-        return 'Ini adalah Halaman dari Buku Cerita Riri';
+        return '<a href=https://www.educastudio.com/category/riri-story-books>Ayo Baca Buku Cerita Riri :D</a>';
     }
     public function song()
     {
-        return 'Ini adalah Lagu Anak-anak Kolak, selamat Mendengarkan :D';
+        return '<a href=https://www.educastudio.com/category/kolak-kids-songs>Mari Mendengarkan Lagu Anak-anak dari Kolak!</a>';
     }
     public function berita($name = null)
     {
-        return 'Ini adalah Halaman Berita dari Educa Studio';
+        return '<a href=https://www.educastudio.com/news>Baca Berita dari Educa Studio</a>';
     }
     public function berita2($name = 'educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19')
     {
-        return 'Ini adalah Halaman Berita dari Educa Studio yang Berbagi pada Warga Terdampak Covid-19';
+        return '<a href=https://www.educastudio.com/news/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19>
+        Educa Studio Berbagi Pada Warga Terdampak Covid-19</a>';
     }
     public function karir()
     {
-        return 'Ini adalah Halaman Program Karir Educa Studio';
+        return '<a href=https://www.educastudio.com/program/karir>Program Karir Educa Studio</a>';
     }
     public function magang()
     {
-        return 'Ini adalah Halaman Program Magang Educa Studio';
+        return '<a href=https://www.educastudio.com/program/magang>Program Magang Educa Studio</a>';
     }
     public function kunjungan()
     {
-        return 'Ini adalah Halaman Program Kunjungan Industri Educa Studio';
+        return '<a href=https://www.educastudio.com/program/kunjungan-industri>Program Kunjungan Industri Educa Studio</a>';
     }
     public function about()
     {
-        return ' Instagram    : @educaStud' . '<br>' .
-            ' Facebook     : Educa Studio' . '<br>' .
-            ' Whatsapp     : +6287345890765';
+        return '<a href=https://www.educastudio.com/about-us>Tentang Educa Studio</a>';
     }
 }
