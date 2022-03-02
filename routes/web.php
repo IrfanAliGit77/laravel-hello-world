@@ -39,57 +39,64 @@ use App\Http\Controllers\EducaController;
 // Route::get('/about', [AboutController::class, 'about']);
 // Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
-Route::get('/', function ($id) {
-    echo '<a href=https://www.educastudio.com>Menuju Ke HOME EDUCA STUDIO</a>';
-});
+// Route::get('/', function ($id) {
+//     echo '<a href=https://www.educastudio.com>Menuju Ke HOME EDUCA STUDIO</a>';
+// });
 
-Route::prefix('category')->group(function () {
-    Route::get('/marbel-edu-games', function ($id) {
-        echo '<a href=https://www.educastudio.com/category/marbel-edu-games>Ingin Bermain Marbel?</a>';
-    });
-    Route::get('/marbel-and-friends-kids-games', function ($id) {
-        echo '<a href=https://www.educastudio.com/category/marbel-and-friends-kids-games>Ingin Bermain Marbel bersama Teman?</a>';
-    });
-    Route::get('/riri-story-books', function ($id) {
-        echo '<a href=https://www.educastudio.com/category/riri-story-books>Ayo Baca Buku Cerita Riri :D</a>';
-    });
-    Route::get('/kolak-kids-songs', function ($id) {
-        echo '<a href=https://www.educastudio.com/category/kolak-kids-songs>Mari Mendengarkan Lagu Anak-anak dari Kolak!</a>';
-    });
-});
+// Route::prefix('category')->group(function () {
+//     Route::get('/marbel-edu-games', function ($id) {
+//         echo '<a href=https://www.educastudio.com/category/marbel-edu-games>Ingin Bermain Marbel?</a>';
+//     });
+//     Route::get('/marbel-and-friends-kids-games', function ($id) {
+//         echo '<a href=https://www.educastudio.com/category/marbel-and-friends-kids-games>Ingin Bermain Marbel bersama Teman?</a>';
+//     });
+//     Route::get('/riri-story-books', function ($id) {
+//         echo '<a href=https://www.educastudio.com/category/riri-story-books>Ayo Baca Buku Cerita Riri :D</a>';
+//     });
+//     Route::get('/kolak-kids-songs', function ($id) {
+//         echo '<a href=https://www.educastudio.com/category/kolak-kids-songs>Mari Mendengarkan Lagu Anak-anak dari Kolak!</a>';
+//     });
+// });
 
-Route::get('/news/{name?}', function ($name = null) {
-    echo '<a href=https://www.educastudio.com/news>Baca Berita dari Educa Studio</a>';
-});
-Route::get('/news/{name?}', function ($name = 'educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19') {
-    echo '<a href=https://www.educastudio.com/news/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19>
-    Educa Studio Berbagi Pada Warga Terdampak Covid-19</a>';
-});
+// Route::get('/news/{name?}', function ($name = null) {
+//     echo '<a href=https://www.educastudio.com/news>Baca Berita dari Educa Studio</a>';
+// });
+// Route::get('/news/{name?}', function ($name = 'educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19') {
+//     echo '<a href=https://www.educastudio.com/news/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19>
+//     Educa Studio Berbagi Pada Warga Terdampak Covid-19</a>';
+// });
 
-Route::prefix('program')->group(function () {
-    Route::get('/karir', function ($id) {
-        echo '<a href=https://www.educastudio.com/program/karir>Program Karir Educa Studio</a>';
-    });
-    Route::get('/magang', function ($id) {
-        echo '<a href=https://www.educastudio.com/program/magang>Program Magang Educa Studio</a>';
-    });
-    Route::get('/kunjungan-industri', function ($id) {
-        echo '<a href=https://www.educastudio.com/program/kunjungan-industri>Program Kunjungan Industri Educa Studio</a>';
-    });
-});
+// Route::prefix('program')->group(function () {
+//     Route::get('/karir', function ($id) {
+//         echo '<a href=https://www.educastudio.com/program/karir>Program Karir Educa Studio</a>';
+//     });
+//     Route::get('/magang', function ($id) {
+//         echo '<a href=https://www.educastudio.com/program/magang>Program Magang Educa Studio</a>';
+//     });
+//     Route::get('/kunjungan-industri', function ($id) {
+//         echo '<a href=https://www.educastudio.com/program/kunjungan-industri>Program Kunjungan Industri Educa Studio</a>';
+//     });
+// });
 
-Route::get('/about-us', function ($id) {
-    echo '<a href=https://www.educastudio.com/about-us>Tentang Educa Studio</a>';
-});
+// Route::get('/about-us', function ($id) {
+//     echo '<a href=https://www.educastudio.com/about-us>Tentang Educa Studio</a>';
+// });
 
-Route::get('/', [EducaController::class, 'index']);
-Route::get('/category/marbel-edu-games', [EducaController::class, 'marbel']);
-Route::get('/category/marbel-and-friends-kids-games', [EducaController::class, 'marbelFriends']);
-Route::get('/category/riri-story-books', [EducaController::class, 'riri']);
-Route::get('/category/kolak-kids-songs', [EducaController::class, 'song']);
-Route::get('/news', [EducaController::class, 'berita']);
-Route::get('/news/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19', [EducaController::class, 'berita2']);
-Route::get('/program/karir', [EducaController::class, 'karir']);
-Route::get('/program/magang', [EducaController::class, 'magang']);
-Route::get('/program/kunjungan-industri', [EducaController::class, 'kunjungan']);
-Route::get('/about-us', [EducaController::class, 'about']);
+// Route::get('/', [EducaController::class, 'index']);
+// Route::get('/category/marbel-edu-games', [EducaController::class, 'marbel']);
+// Route::get('/category/marbel-and-friends-kids-games', [EducaController::class, 'marbelFriends']);
+// Route::get('/category/riri-story-books', [EducaController::class, 'riri']);
+// Route::get('/category/kolak-kids-songs', [EducaController::class, 'song']);
+// Route::get('/news', [EducaController::class, 'berita']);
+// Route::get('/news/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19', [EducaController::class, 'berita2']);
+// Route::get('/program/karir', [EducaController::class, 'karir']);
+// Route::get('/program/magang', [EducaController::class, 'magang']);
+// Route::get('/program/kunjungan-industri', [EducaController::class, 'kunjungan']);
+// Route::get('/about-us', [EducaController::class, 'about']);
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return view('index');
+});
