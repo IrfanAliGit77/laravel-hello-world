@@ -74,42 +74,39 @@
        <h2 class="wow fadeInUp" data-wow-delay="0.3s">BEST DISHES</h2>
     <div class="slider">
                 <ul class="slides">
-                  <li class="slide">
-                  <div class="item">
-                        <img src="images/thumb1.png" width="226" height="225" alt="sliderimg" class="wow flipInX"
-                         data-wow-delay=".8s">
-                        <h3>Pasta Capellini</h3>
-                    </div> <!-- end of item-->
-
-                 <div class="item2">
-                        <img src="images/thumb2.jpg" width="226" height="225" alt="sliderimg" class="wow flipInX"
-                         data-wow-delay=".8s">
-                        <h3>Pasta Pillus</h3>
-                    </div> <!-- end of item-->
-
-                 <div class="item3">
-                        <img src="images/thumb3.png" width="226" height="225" alt="sliderimg" class="wow flipInX"
-                         data-wow-delay=".8s">
-                        <h3>Pasta Fusilli</h3>
-                    </div> <!-- end of item-->
-                </li>
+                @for($i=0;$i<2;$i++)
                  <li class="slide">
-                  <div class="item">
-                        <img src="images/thumb1.png" width="226" height="225" alt="sliderimg" >
-                        <h3>Pasta Capellini</h3>
-                    </div> <!-- end of item-->
-
-                 <div class="item2">
-                        <img src="images/thumb2.jpg" width="226" height="225" alt="sliderimg">
-                        <h3>Pasta Pillus</h3>
-                    </div> <!-- end of item-->
-
-                 <div class="item3">
-                        <img src="images/thumb3.png" width="226" height="225" alt="sliderimg">
-                        <h3>Pasta Fusilli</h3>
-                    </div> <!-- end of item-->
+                    @foreach($posts as $post)
+                        @if($post->id==1)
+                            <div class="item">
+                                <img src="{{$post->image}}" width="226" height="225" alt="sliderimg" >
+                                <h3>{{$post->title}}</h3>
+                            </div> <!-- end of item-->
+                        @else
+                            <div class="item{{$post->id}}">
+                                <img src="{{$post->image}}" width="226" height="225" alt="sliderimg" >
+                                <h3>{{$post->title}}</h3>
+                            </div> <!-- end of item-->
+                        @endif
+                    @endforeach
                 </li>
+                {{-- <li class="slide">
+                    @foreach($posts as $post)
+                    @if($post->id==1)
+                    <div class="item">
+                        <img src="{{$post->image}}" width="226" height="225" alt="sliderimg" >
+                        <h3>{{$post->title}}</h3>
+                    </div>
 
+                    @else
+                    <div class="item{{$post->id}}">
+                        <img src="{{$post->image}}" width="226" height="225" alt="sliderimg" >
+                        <h3>{{$post->title}}</h3>
+                    </div>
+                    @endif
+                @endforeach
+                </li> --}}
+        @endfor
       </ul>
     </div> <!-- end of slider-->
   </div> <!-- end of besth dishes-->
