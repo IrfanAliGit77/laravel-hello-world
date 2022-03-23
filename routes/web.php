@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 // use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\AboutController;
@@ -94,7 +95,9 @@ use App\Http\Controllers\HomeController;
 // Route::get('/program/kunjungan-industri', [EducaController::class, 'kunjungan']);
 // Route::get('/about-us', [EducaController::class, 'about']);
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index']);
+
+
