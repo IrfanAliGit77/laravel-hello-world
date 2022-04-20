@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 // use App\Http\Controllers\PageController;
-use App\Http\Controllers\HomeController;
+//use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\AboutController;
-// use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleController;
 // use App\Http\Controllers\EducaController;
 
 /*
@@ -97,7 +97,7 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/', [HomeController::class, 'index']);
-
+Route::resource('articles', ArticleController::class);
 
