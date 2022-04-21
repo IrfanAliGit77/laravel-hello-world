@@ -100,4 +100,4 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/', [HomeController::class, 'index']);
 Route::resource('articles', ArticleController::class);
-
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');
