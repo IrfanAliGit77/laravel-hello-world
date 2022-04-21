@@ -13,10 +13,9 @@
         </tr> 
         @foreach ($articles as $article) 
         <tr> 
-            <td>{{ $article->title }}</td> 
+            <td><a href="{{ route('articles.edit', ['article'=>$article->id]) }}">{{ $article->title  }}</a></td> 
             <td>{{ $article->content }}</td> 
-            <td><img width="150px" 
-src="{{asset('storage/'.$article->featured_image)}}"></td>
+            <td><img width="150px" src="{{asset('storage/'.$article->featured_image)}}"></td>
         </tr> 
         @endforeach 
     </table> 
